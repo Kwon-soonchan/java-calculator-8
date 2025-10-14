@@ -1,0 +1,24 @@
+{
+  "name": "week_1",
+  "version": "1.0.0",
+  "description": "- - -",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kwon-soonchan/java-calculator-8.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kwon-soonchan/java-calculator-8/issues"
+  },
+  "homepage": "https://github.com/Kwon-soonchan/java-calculator-8#readme",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
