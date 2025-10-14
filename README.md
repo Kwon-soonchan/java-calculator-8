@@ -1,5 +1,7 @@
 # java-calculator-precourse
 
+ - - -
+
 ## <기능 요구사항>
 
 - 쉼표(,) 또는 콜론(:)을 구분자로 가지는 문자열을 전달하는 경우 구분자를 기준으로 분리한 각 숫자의 합을 반환한다.
@@ -10,6 +12,8 @@
   예를 들어 "//;\n1;2;3"과 같이 값을 입력할 경우 커스텀 구분자는 세미콜론(;)이며, 결과 값은 6이 반환되어야 한다.
 - 사용자가 잘못된 값을 입력할 경우 IllegalArgumentException을 발생시킨 후 애플리케이션은 종료되어야 한다.
 
+ - - -
+
 ## <구현해야 할 것들>
 
 ### 1. 입력 기능
@@ -19,17 +23,28 @@
 
 ### 2. 계산 기능
 
-- [ ] 기본으로 가지는 구분자 delimiter_list 만들기 (","와 ":")
-- [ ] 숫자들만 받을 수 있는 number_list 만들기
-- [ ] 커스텀 구분자를 구분자 delimiter_list에 추가하기 ("//"와 "\n"" 사이의 문자가 커스텀 구분자)
-- [ ] 구분자를 기준으로 숫자들을 number_list에 추가하기
-- [ ] number_list에 들어있는 숫자들의 합을 sum에 저장하기
+- [x] 기본으로 가지는 구분자 delimiter_list 만들기 (","와 ":")
+- [x] 숫자들만 받을 수 있는 number_list 만들기
+- [x] 커스텀 구분자를 구분자 delimiter_list에 추가하기 ("//"와 "\n"" 사이의 문자가 커스텀 구분자)
+- [x] 구분자를 기준으로 숫자들을 number_list에 추가하기
+- [x] number_list에 들어있는 숫자들의 합을 sum에 저장하기
 
 ### 3. 출력 기능
 
-- [ ] "결과 :" + sum 출력하기
+- [x] "결과 :" + sum 출력하기
 
 ### 4. 예외 처리
 
 - [ ] 입력값이 음수로 들어오면 "IllegalArgumentException"을 throw하기
-- [ ] delimiter_list에 없는 기호가 입력되면 "IllegalArgumentException"을 throw하기
+- [x] delimiter_list에 없는 기호가 입력되면 "IllegalArgumentException"을 throw하기
+
+ - - -
+
+## <트러블슈팅>
+
+- 이스케이프 처리가 필요한 문자들 ("+", ".", "|", "\", "\n", ... )
+- 음수랑 문자 "-"를 어떻게 구분할것인지
+- 숫자가 구분자로 들어온다면?
+- delimiter_list 대신 정규식을 사용해서 String으로 받는 방법 (",|:")
+- 커밋 컨벤션을 생각하지 못하고 무턱대고 커밋한 뒤, git rebase로 혼남.. 이후에는 Node.js -> husky 사용중..
+- 캐리지 리턴? (\r)
