@@ -35,7 +35,7 @@
 
 ### 4. 예외 처리
 
-- [ ] 입력값이 음수로 들어오면 "IllegalArgumentException"을 throw하기
+- [x] 입력값이 음수로 들어오면 "IllegalArgumentException"을 throw하기
 - [x] delimiter_list에 없는 기호가 입력되면 "IllegalArgumentException"을 throw하기
 
  - - -
