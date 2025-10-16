@@ -9,10 +9,23 @@ public class Application {
         String input = Console.readLine();
 
         String deli = ",|:";
+        char[] escape_word_list = {'.', '*', '+', '?', '^', '$', '|', '{', '}', '[', ']', '(', ')', '\\'};
 
         // 입력된 문자열이 "/" 로 시작한다면 커스텀 구분자 추가 후 input을 "//?\n"가 없는 형태로 수정
         if (input.startsWith("/")) {
-            deli += "|" + input.charAt(2);
+            char customDelimiter = input.charAt(2);
+            boolean isEscape = false;
+            for (char escape_char : escape_word_list) {
+                if (escape_char == customDelimiter) {
+                    isEscape = true;
+                    break;
+                }
+            }
+            if (isEscape) {
+                deli += "|\\" + customDelimiter;
+            } else {
+                deli += "|" + customDelimiter;
+            }
             input = input.substring(5);
 
         }
