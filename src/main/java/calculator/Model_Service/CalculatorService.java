@@ -1,4 +1,6 @@
-package Model_Service;
+package calculator.Model_Service;
+
+import java.util.regex.Pattern;
 
 public class CalculatorService {
     public int calculate(String input) {
