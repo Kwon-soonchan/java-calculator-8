@@ -6,16 +6,16 @@ import calculator.View.OutputView;
 
 public class CalculatorController {
     public void run() {
-        try {
-            String input = InputView.readInput();
+//        try {
+        String input = InputView.readInput();
 
-            CalculatorService calculator = new CalculatorService();
-            Long result = calculator.calculate(input);
+        CalculatorService calculator = new CalculatorService();
+        Long result = calculator.calculate(input);
 
-            OutputView.printResult(result);
+        OutputView.printResult(result);
 
-        } catch (IllegalArgumentException e) {
-            OutputView.printError(e.getMessage());
-        }
+//        } catch (IllegalArgumentException e) {
+//        OutputView.printError(e.getMessage());
+//        }
     }
 }
