@@ -69,7 +69,7 @@ class ApplicationTest extends NsTest {
     @DisplayName("요구사항: 여러 글자 커스텀 구분자 테스트 (Pattern.quote 필요)")
     void 여러_글자_커스텀_구분자_테스트() {
         String input = "//[!!]\\n1!!2!!3";
-        int result = calculator.calculate(input);
+        Long result = calculator.calculate(input);
         assertThat(result).isEqualTo(6);
     }
 
@@ -78,7 +78,7 @@ class ApplicationTest extends NsTest {
     void 정규식_특수문자_구분자_테스트() {
         // '*'는 정규식에서 0번 이상 반복을 의미하지만, Pattern.quote가 처리해야 함
         String input = "//*\\n1*2*3";
-        int result = calculator.calculate(input);
+        Long result = calculator.calculate(input);
         assertThat(result).isEqualTo(6);
     }
 

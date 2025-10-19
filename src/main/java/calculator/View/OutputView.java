@@ -1,7 +1,7 @@
 package calculator.View;
 
 public class OutputView {
-    public static void printResult(int sum) {
+    public static void printResult(Long sum) {
         System.out.println("결과 : " + sum);
     }
 

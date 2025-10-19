@@ -10,7 +10,7 @@ public class CalculatorController {
             String input = InputView.readInput();
 
             CalculatorService calculator = new CalculatorService();
-            int result = calculator.calculate(input);
+            Long result = calculator.calculate(input);
 
             OutputView.printResult(result);
 
